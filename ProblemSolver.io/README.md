@@ -44,7 +44,7 @@ An interactive platform where users can learn, practice, visualize, and solve Da
 ### 1. Clone the repository
 ```bash
 git clone <repository-url>
-cd "DSA Problem Solver Platform"
+cd "ProblemSolver.io"
 ```
 
 ### 2. Backend Setup
@@ -93,7 +93,7 @@ The frontend will run on `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-DSA Problem Solver Platform/
+ProblemSolver.io/
 ├── backend/
 │   ├── models/          # MongoDB models
 │   │   ├── User.js
