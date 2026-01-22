@@ -1,0 +1,30 @@
+.code-editor {
+  background-color: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.code-textarea {
+  width: 100%;
+  min-height: 400px;
+  padding: 20px;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border: none;
+  outline: none;
+  font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.code-textarea::placeholder {
+  color: #64748b;
+}
+
+.code-textarea:focus {
+  outline: none;
+}
+

@@ -1,0 +1,150 @@
+.learning-modules-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 70px);
+}
+
+.modules-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: 12px;
+}
+
+/* Roadmap Layout */
+.roadmap-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+.roadmap-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Stagger animation for items */
+.roadmap-step:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.roadmap-step:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.roadmap-step:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.roadmap-step:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.roadmap-step:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.roadmap-step:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.step-line {
+  flex: 1;
+  width: 4px;
+  background-color: #e5e7eb;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.roadmap-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  padding: 25px;
+  border-left: 6px solid var(--module-color);
+  border-top: none;
+  /* Override grid style */
+}
+
+/* Override existing module-card styles for roadmap context */
+.roadmap-card .module-icon {
+  margin-bottom: 0;
+  font-size: 48px;
+}
+
+.roadmap-card .module-content {
+  flex: 1;
+}
+
+.roadmap-card .module-name {
+  margin-bottom: 8px;
+}
+
+.roadmap-card .module-description {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.roadmap-card:hover {
+  transform: translateX(10px);
+  /* Move right instead of up */
+}
+
+@media (max-width: 600px) {
+  .roadmap-step {
+    gap: 15px;
+  }
+
+  .roadmap-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .roadmap-card .module-icon {
+    margin-bottom: 10px;
+  }
+}

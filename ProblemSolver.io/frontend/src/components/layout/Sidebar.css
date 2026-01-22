@@ -1,0 +1,24 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 80px; /* Below navbar */
+  width: 200px;
+  height: calc(100vh - 80px);
+  background-color: var(--surface-color);
+  border-right: 1px solid var(--border-color);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-logo img {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

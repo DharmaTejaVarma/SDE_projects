@@ -1,0 +1,149 @@
+.admin-panel-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 70px);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.admin-tab {
+  padding: 12px 24px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-tab:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.admin-tab.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.admin-section {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.problem-form {
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.problem-form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.problems-table,
+.users-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.problem-row,
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.problem-info,
+.user-info {
+  flex: 1;
+}
+
+.problem-info h3,
+.user-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.problem-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.user-info p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-badge.admin {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.role-badge.user {
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .problem-row,
+  .user-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
