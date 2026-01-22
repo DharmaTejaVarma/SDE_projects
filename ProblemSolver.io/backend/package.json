@@ -1,7 +1,7 @@
 {
-  "name": "dsa-platform-backend",
+  "name": "ProblemSolver.io-backend",
   "version": "1.0.0",
-  "description": "Backend for DSA Problem Solver Platform",
+  "description": "Backend for ProblemSolver.io",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
