@@ -1,0 +1,3722 @@
+[
+  {
+    "_id": "1",
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "category": "arrays",
+    "difficulty": "easy",
+    "constraints": "2 <= nums.length <= 10^4",
+    "sampleInput": "[2,7,11,15]\n9",
+    "sampleOutput": "[0,1]",
+    "explanation": "2 + 7 = 9",
+    "testCases": [
+      {
+        "input": "[2,7,11,15]\n9",
+        "expectedOutput": "[0,1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3,2,4]\n6",
+        "expectedOutput": "[1,2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3,3]\n6",
+        "expectedOutput": "[0,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[2,7,11,15]\n26",
+        "expectedOutput": "[2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]\n9",
+        "expectedOutput": "[3,4]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,-2,-3,-4,-5]\n-8",
+        "expectedOutput": "[2,4]",
+        "isHidden": true
+      },
+      {
+        "input": "[10,20,30,40,50]\n90",
+        "expectedOutput": "[3,4]",
+        "isHidden": true
+      },
+      {
+        "input": "[5,25,75]\n100",
+        "expectedOutput": "[1,2]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def twoSum(nums, target): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Hashmap"
+      }
+    }
+  },
+  {
+    "_id": "2",
+    "title": "Best Time to Buy and Sell Stock",
+    "description": "You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
+    "category": "arrays",
+    "difficulty": "easy",
+    "constraints": "1 <= prices.length <= 10^5",
+    "sampleInput": "[7,1,5,3,6,4]",
+    "sampleOutput": "5",
+    "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.",
+    "testCases": [
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "[7,1,5,3,6,4]",
+        "expectedOutput": "5",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxProfit(prices): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "One pass"
+      }
+    }
+  },
+  {
+    "_id": "3",
+    "title": "Contains Duplicate",
+    "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+    "category": "arrays",
+    "difficulty": "easy",
+    "constraints": "1 <= nums.length <= 10^5",
+    "sampleInput": "[1,2,3,1]",
+    "sampleOutput": "true",
+    "explanation": "1 appears twice",
+    "testCases": [
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,1]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def containsDuplicate(nums): return len(set(nums)) != len(nums)",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Set"
+      }
+    }
+  },
+  {
+    "_id": "4",
+    "title": "Product of Array Except Self",
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "2 <= nums.length <= 10^5",
+    "sampleInput": "[1,2,3,4]",
+    "sampleOutput": "[24,12,8,6]",
+    "explanation": "Product of all except self.",
+    "testCases": [
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def productExceptSelf(nums): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Prefix and Suffix products"
+      }
+    }
+  },
+  {
+    "_id": "5",
+    "title": "Maximum Subarray",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "1 <= nums.length <= 10^5",
+    "sampleInput": "[-2,1,-3,4,-1,2,1,-5,4]",
+    "sampleOutput": "6",
+    "explanation": "[4,-1,2,1] has the largest sum = 6.",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxSubArray(nums): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Kadane's Algorithm"
+      }
+    }
+  },
+  {
+    "_id": "6",
+    "title": "Maximum Product Subarray",
+    "description": "Given an integer array nums, find a subarray that has the largest product, and return the product.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "1 <= nums.length <= 2 * 10^4",
+    "sampleInput": "[2,3,-2,4]",
+    "sampleOutput": "6",
+    "explanation": "[2,3] has the largest product 6.",
+    "testCases": [
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[2,3,-2,4]",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxProduct(nums): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Keep track of min and max products"
+      }
+    }
+  },
+  {
+    "_id": "7",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "description": "Given the sorted rotated array nums of unique elements, return the minimum element of this array.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "1 <= nums.length <= 5000",
+    "sampleInput": "[3,4,5,1,2]",
+    "sampleOutput": "1",
+    "explanation": "Original array was [1,2,3,4,5] rotated 3 times.",
+    "testCases": [
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,4,5,1,2]",
+        "expectedOutput": "1",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def findMin(nums): pass",
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Binary Search"
+      }
+    }
+  },
+  {
+    "_id": "8",
+    "title": "Search in Rotated Sorted Array",
+    "description": "Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "1 <= nums.length <= 5000",
+    "sampleInput": "[4,5,6,7,0,1,2], target = 0",
+    "sampleOutput": "4",
+    "explanation": "Index of 0 is 4.",
+    "testCases": [
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": false
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": false
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[4,5,6,7,0,1,2], target = 0",
+        "expectedOutput": "4",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def search(nums, target): pass",
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Binary Search"
+      }
+    }
+  },
+  {
+    "_id": "9",
+    "title": "3Sum",
+    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "0 <= nums.length <= 3000",
+    "sampleInput": "[-1,0,1,2,-1,-4]",
+    "sampleOutput": "[[-1,-1,2],[-1,0,1]]",
+    "explanation": "Distinct triplets summing to 0.",
+    "testCases": [
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": false
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": false
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      },
+      {
+        "input": "[-1,0,1,2,-1,-4]",
+        "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def threeSum(nums): pass",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Sort and Two Pointers"
+      }
+    }
+  },
+  {
+    "_id": "10",
+    "title": "Container With Most Water",
+    "description": "You are given an integer array height of length n. Find two lines that together with the x-axis form a container, such that the container contains the most water.",
+    "category": "arrays",
+    "difficulty": "medium",
+    "constraints": "2 <= height.length <= 10^5",
+    "sampleInput": "[1,8,6,2,5,4,8,3,7]",
+    "sampleOutput": "49",
+    "explanation": "Max area is 49.",
+    "testCases": [
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      },
+      {
+        "input": "[1,8,6,2,5,4,8,3,7]",
+        "expectedOutput": "49",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxArea(height): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Two Pointers"
+      }
+    }
+  },
+  {
+    "_id": "11",
+    "title": "Valid Parentheses",
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "category": "stacks",
+    "difficulty": "easy",
+    "constraints": "1 <= s.length <= 10^4",
+    "sampleInput": "()[]{}",
+    "sampleOutput": "true",
+    "explanation": "Valid pairs.",
+    "testCases": [
+      {
+        "input": "()",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "()[]{}",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "(]",
+        "expectedOutput": "false",
+        "isHidden": true
+      },
+      {
+        "input": "([)]",
+        "expectedOutput": "false",
+        "isHidden": true
+      },
+      {
+        "input": "{[]}",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "((",
+        "expectedOutput": "false",
+        "isHidden": true
+      },
+      {
+        "input": "}}{",
+        "expectedOutput": "false",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def isValid(s): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Stack"
+      }
+    }
+  },
+  {
+    "_id": "12",
+    "title": "Min Stack",
+    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "Methods pop, top and getMin operations will always be called on non-empty stacks.",
+    "sampleInput": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+    "sampleOutput": "[null,null,null,null,-3,null,0,-2]",
+    "explanation": "Standard stack operations.",
+    "testCases": [
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": false
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": false
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      },
+      {
+        "input": "MinStack, push(-2), push(0), push(-3), getMin(), pop(), top(), getMin()",
+        "expectedOutput": "[null,null,null,null,-3,null,0,-2]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class MinStack: pass",
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Two stacks"
+      }
+    }
+  },
+  {
+    "_id": "13",
+    "title": "Evaluate Reverse Polish Notation",
+    "description": "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "1 <= tokens.length <= 10^4",
+    "sampleInput": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+    "sampleOutput": "9",
+    "explanation": "((2 + 1) * 3) = 9",
+    "testCases": [
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": false
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": false
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      },
+      {
+        "input": "[\"2\",\"1\",\"+\",\"3\",\"*\"]",
+        "expectedOutput": "9",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def evalRPN(tokens): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Stack"
+      }
+    }
+  },
+  {
+    "_id": "14",
+    "title": "Generate Parentheses",
+    "description": "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "1 <= n <= 8",
+    "sampleInput": "3",
+    "sampleOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+    "explanation": "All valid combinations.",
+    "testCases": [
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": false
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": false
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      },
+      {
+        "input": "3",
+        "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def generateParenthesis(n): pass",
+        "timeComplexity": "Catalan number",
+        "spaceComplexity": "O(n)",
+        "explanation": "Backtracking"
+      }
+    }
+  },
+  {
+    "_id": "15",
+    "title": "Daily Temperatures",
+    "description": "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "1 <= temperatures.length <= 10^5",
+    "sampleInput": "[73,74,75,71,69,72,76,73]",
+    "sampleOutput": "[1,1,4,2,1,1,0,0]",
+    "explanation": "Wait days for warmer temp.",
+    "testCases": [
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": false
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": false
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      },
+      {
+        "input": "[73,74,75,71,69,72,76,73]",
+        "expectedOutput": "[1,1,4,2,1,1,0,0]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def dailyTemperatures(T): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Monotonic Stack"
+      }
+    }
+  },
+  {
+    "_id": "16",
+    "title": "Car Fleet",
+    "description": "There are n cars going to the same destination along a one-lane road. The destination is target miles away.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "n == position.length == speed.length",
+    "sampleInput": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+    "sampleOutput": "3",
+    "explanation": "Cars form fleets.",
+    "testCases": [
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]",
+        "expectedOutput": "3",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def carFleet(target, position, speed): pass",
+        "timeComplexity": "O(n log n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Sort by position"
+      }
+    }
+  },
+  {
+    "_id": "17",
+    "title": "Largest Rectangle in Histogram",
+    "description": "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.",
+    "category": "stacks",
+    "difficulty": "hard",
+    "constraints": "1 <= heights.length <= 10^5",
+    "sampleInput": "[2,1,5,6,2,3]",
+    "sampleOutput": "10",
+    "explanation": "The largest rectangle is shown in the red area, which has an area = 10 units.",
+    "testCases": [
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,5,6,2,3]",
+        "expectedOutput": "10",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def largestRectangleArea(heights): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Monotonic Stack"
+      }
+    }
+  },
+  {
+    "_id": "18",
+    "title": "Valid Palindrome",
+    "description": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.",
+    "category": "stacks",
+    "difficulty": "easy",
+    "constraints": "1 <= s.length <= 2 * 10^5",
+    "sampleInput": "A man, a plan, a canal: Panama",
+    "sampleOutput": "true",
+    "explanation": "amanaplanacanalpanama is a palindrome.",
+    "testCases": [
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def isPalindrome(s): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Two Pointers"
+      }
+    }
+  },
+  {
+    "_id": "19",
+    "title": "Baseball Game",
+    "description": "You are keeping the scores for a baseball game with strange rules.",
+    "category": "stacks",
+    "difficulty": "easy",
+    "constraints": "1 <= operations.length <= 1000",
+    "sampleInput": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+    "sampleOutput": "30",
+    "explanation": "Calculate score based on ops.",
+    "testCases": [
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": false
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": false
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      },
+      {
+        "input": "[\"5\",\"2\",\"C\",\"D\",\"+\"]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def calPoints(ops): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Stack simulation"
+      }
+    }
+  },
+  {
+    "_id": "20",
+    "title": "Simplify Path",
+    "description": "Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.",
+    "category": "stacks",
+    "difficulty": "medium",
+    "constraints": "1 <= path.length <= 3000",
+    "sampleInput": "/home//foo/",
+    "sampleOutput": "/home/foo",
+    "explanation": "Remove redundant slashes.",
+    "testCases": [
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": false
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": false
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      },
+      {
+        "input": "/home//foo/",
+        "expectedOutput": "/home/foo",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def simplifyPath(path): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Stack split by /"
+      }
+    }
+  },
+  {
+    "_id": "21",
+    "title": "Implement Stack using Queues",
+    "description": "Implement a last-in-first-out (LIFO) stack using only two queues.",
+    "category": "queues",
+    "difficulty": "easy",
+    "constraints": "1 <= x <= 9",
+    "sampleInput": "push(1), push(2), pop(), top()",
+    "sampleOutput": "2, 2",
+    "explanation": "LIFO behavior.",
+    "testCases": [
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": false
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": false
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), top()",
+        "expectedOutput": "2, 2",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class MyStack: pass",
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(n)",
+        "explanation": "One queue rotation"
+      }
+    }
+  },
+  {
+    "_id": "22",
+    "title": "Implement Queue using Stacks",
+    "description": "Implement a first-in-first-out (FIFO) queue using only two stacks.",
+    "category": "queues",
+    "difficulty": "easy",
+    "constraints": "1 <= x <= 9",
+    "sampleInput": "push(1), push(2), pop(), peek()",
+    "sampleOutput": "1, 2",
+    "explanation": "FIFO behavior.",
+    "testCases": [
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": false
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": false
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      },
+      {
+        "input": "push(1), push(2), pop(), peek()",
+        "expectedOutput": "1, 2",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class MyQueue: pass",
+        "timeComplexity": "O(1) amortized",
+        "spaceComplexity": "O(n)",
+        "explanation": "Two stacks"
+      }
+    }
+  },
+  {
+    "_id": "23",
+    "title": "Design Circular Queue",
+    "description": "Design your implementation of the circular queue.",
+    "category": "queues",
+    "difficulty": "medium",
+    "constraints": "k <= 1000",
+    "sampleInput": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+    "sampleOutput": "true, true, true, false, 3",
+    "explanation": "Circular buffer.",
+    "testCases": [
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": false
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": false
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      },
+      {
+        "input": "CircularQueue(3), enQueue(1), enQueue(2), enQueue(3), enQueue(4), Rear()",
+        "expectedOutput": "true, true, true, false, 3",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class MyCircularQueue: pass",
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(k)",
+        "explanation": "Array with pointers"
+      }
+    }
+  },
+  {
+    "_id": "24",
+    "title": "Sliding Window Maximum",
+    "description": "You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window.",
+    "category": "queues",
+    "difficulty": "hard",
+    "constraints": "1 <= k <= nums.length",
+    "sampleInput": "[1,3,-1,-3,5,3,6,7], k = 3",
+    "sampleOutput": "[3,3,5,5,6,7]",
+    "explanation": "Max in each window.",
+    "testCases": [
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,-1,-3,5,3,6,7], k = 3",
+        "expectedOutput": "[3,3,5,5,6,7]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxSlidingWindow(nums, k): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(k)",
+        "explanation": "Deque"
+      }
+    }
+  },
+  {
+    "_id": "25",
+    "title": "Number of Recent Calls",
+    "description": "You have a RecentCounter class which counts the number of recent requests within a certain time frame.",
+    "category": "queues",
+    "difficulty": "easy",
+    "constraints": "1 <= t <= 10^9",
+    "sampleInput": "ping(1), ping(100), ping(3001), ping(3002)",
+    "sampleOutput": "1, 2, 3, 3",
+    "explanation": "Range check [t-3000, t].",
+    "testCases": [
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": false
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": false
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      },
+      {
+        "input": "ping(1), ping(100), ping(3001), ping(3002)",
+        "expectedOutput": "1, 2, 3, 3",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class RecentCounter: pass",
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Queue"
+      }
+    }
+  },
+  {
+    "_id": "26",
+    "title": "Dota2 Senate",
+    "description": "In the world of Dota2, there are two parties: the Radiant and the Dire. Decide which party will win.",
+    "category": "queues",
+    "difficulty": "medium",
+    "constraints": "n <= 10^4",
+    "sampleInput": "RD",
+    "sampleOutput": "Radiant",
+    "explanation": "Simulation.",
+    "testCases": [
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": false
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": false
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      },
+      {
+        "input": "RD",
+        "expectedOutput": "Radiant",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def predictPartyVictory(senate): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Two Queues"
+      }
+    }
+  },
+  {
+    "_id": "27",
+    "title": "Time Needed to Buy Tickets",
+    "description": "There are n people in a line queuing to buy tickets, where the 0th person is at the front of the line and the (n - 1)th person is at the back of the line.",
+    "category": "queues",
+    "difficulty": "easy",
+    "constraints": "n <= 100",
+    "sampleInput": "tickets = [2,3,2], k = 2",
+    "sampleOutput": "6",
+    "explanation": "Simulation.",
+    "testCases": [
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "tickets = [2,3,2], k = 2",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def timeRequiredToBuy(tickets, k): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "One pass calculation"
+      }
+    }
+  },
+  {
+    "_id": "28",
+    "title": "First Unique Character in a String",
+    "description": "Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.",
+    "category": "queues",
+    "difficulty": "easy",
+    "constraints": "1 <= s.length <= 10^5",
+    "sampleInput": "leetcode",
+    "sampleOutput": "0",
+    "explanation": "l is unique.",
+    "testCases": [
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      },
+      {
+        "input": "leetcode",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def firstUniqChar(s): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Hashmap or Queue"
+      }
+    }
+  },
+  {
+    "_id": "29",
+    "title": "Reveal Cards In Increasing Order",
+    "description": "You are given an integer array deck. There is a deck of cards where every card has a unique integer. The integer on the ith card is deck[i].",
+    "category": "queues",
+    "difficulty": "medium",
+    "constraints": "1 <= deck.length <= 1000",
+    "sampleInput": "[17,13,11,2,3,5,7]",
+    "sampleOutput": "[2,13,3,11,5,17,7]",
+    "explanation": "Reverse simulation.",
+    "testCases": [
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": false
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": false
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      },
+      {
+        "input": "[17,13,11,2,3,5,7]",
+        "expectedOutput": "[2,13,3,11,5,17,7]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def deckRevealedIncreasing(deck): pass",
+        "timeComplexity": "O(n log n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Sort + Queue simulation"
+      }
+    }
+  },
+  {
+    "_id": "30",
+    "title": "Stamping The Sequence",
+    "description": "You want to form a target string of lowercase letters.",
+    "category": "queues",
+    "difficulty": "hard",
+    "constraints": "1 <= stamp.length <= target.length <= 1000",
+    "sampleInput": "stamp = \"abc\", target = \"ababc\"",
+    "sampleOutput": "[0,2]",
+    "explanation": "Reverse stamping.",
+    "testCases": [
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": false
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": false
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      },
+      {
+        "input": "stamp = \"abc\", target = \"ababc\"",
+        "expectedOutput": "[0,2]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def movesToStamp(stamp, target): pass",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Reverse processing"
+      }
+    }
+  },
+  {
+    "_id": "31",
+    "title": "Reverse Linked List",
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "category": "linkedLists",
+    "difficulty": "easy",
+    "constraints": "0 <= nodes <= 5000",
+    "sampleInput": "[1,2,3,4,5]",
+    "sampleOutput": "[5,4,3,2,1]",
+    "explanation": "Reverse pointers.",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def reverseList(head): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Iterative"
+      }
+    }
+  },
+  {
+    "_id": "32",
+    "title": "Merge Two Sorted Lists",
+    "description": "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a one sorted list.",
+    "category": "linkedLists",
+    "difficulty": "easy",
+    "constraints": "0 <= nodes <= 50",
+    "sampleInput": "list1 = [1,2,4], list2 = [1,3,4]",
+    "sampleOutput": "[1,1,2,3,4,4]",
+    "explanation": "Merge sorted.",
+    "testCases": [
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": false
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": false
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      },
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def mergeTwoLists(l1, l2): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Pointer manipulation"
+      }
+    }
+  },
+  {
+    "_id": "33",
+    "title": "Reorder List",
+    "description": "You are given the head of a singly linked-list. The list can be represented as: L0 -> L1 -> ... -> Ln-1 -> Ln.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "1 <= nodes <= 5 * 10^4",
+    "sampleInput": "[1,2,3,4]",
+    "sampleOutput": "[1,4,2,3]",
+    "explanation": "Split, reverse second half, merge.",
+    "testCases": [
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3,4]",
+        "expectedOutput": "[1,4,2,3]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def reorderList(head): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Find middle, reverse end, merge"
+      }
+    }
+  },
+  {
+    "_id": "34",
+    "title": "Remove Nth Node From End of List",
+    "description": "Given the head of a linked list, remove the nth node from the end of the list and return its head.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "1 <= nodes <= 30",
+    "sampleInput": "head = [1,2,3,4,5], n = 2",
+    "sampleOutput": "[1,2,3,5]",
+    "explanation": "Remove 4.",
+    "testCases": [
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": false
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": false
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      },
+      {
+        "input": "head = [1,2,3,4,5], n = 2",
+        "expectedOutput": "[1,2,3,5]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def removeNthFromEnd(head, n): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Two pointers"
+      }
+    }
+  },
+  {
+    "_id": "35",
+    "title": "Copy List with Random Pointer",
+    "description": "A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "0 <= nodes <= 1000",
+    "sampleInput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+    "sampleOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+    "explanation": "Deep copy.",
+    "testCases": [
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": false
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": false
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "expectedOutput": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def copyRandomList(head): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Hashmap old->new"
+      }
+    }
+  },
+  {
+    "_id": "36",
+    "title": "Add Two Numbers",
+    "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "1 <= nodes <= 100",
+    "sampleInput": "l1 = [2,4,3], l2 = [5,6,4]",
+    "sampleOutput": "[7,0,8]",
+    "explanation": "342 + 465 = 807.",
+    "testCases": [
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": false
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": false
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "expectedOutput": "[7,0,8]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def addTwoNumbers(l1, l2): pass",
+        "timeComplexity": "O(max(m,n))",
+        "spaceComplexity": "O(max(m,n))",
+        "explanation": "Digit addition with carry"
+      }
+    }
+  },
+  {
+    "_id": "37",
+    "title": "Linked List Cycle",
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+    "category": "linkedLists",
+    "difficulty": "easy",
+    "constraints": "0 <= nodes <= 10^4",
+    "sampleInput": "head = [3,2,0,-4], pos = 1",
+    "sampleOutput": "true",
+    "explanation": "Cycle exists.",
+    "testCases": [
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def hasCycle(head): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Floyd's Tortoise and Hare"
+      }
+    }
+  },
+  {
+    "_id": "38",
+    "title": "Find the Duplicate Number",
+    "description": "Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "1 <= n <= 10^5",
+    "sampleInput": "[1,3,4,2,2]",
+    "sampleOutput": "2",
+    "explanation": "2 is duplicate.",
+    "testCases": [
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "[1,3,4,2,2]",
+        "expectedOutput": "2",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def findDuplicate(nums): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Cycle detection (Floyd's)"
+      }
+    }
+  },
+  {
+    "_id": "39",
+    "title": "LRU Cache",
+    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.",
+    "category": "linkedLists",
+    "difficulty": "medium",
+    "constraints": "capacity <= 3000",
+    "sampleInput": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+    "sampleOutput": "[null, null, null, 1, null, -1]",
+    "explanation": "Doubly linked list + Map.",
+    "testCases": [
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": false
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": false
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      },
+      {
+        "input": "LRUCache(2), put(1, 1), put(2, 2), get(1), put(3, 3), get(2)",
+        "expectedOutput": "[null, null, null, 1, null, -1]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "class LRUCache: pass",
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(capacity)",
+        "explanation": "Map + DLL"
+      }
+    }
+  },
+  {
+    "_id": "40",
+    "title": "Merge k Sorted Lists",
+    "description": "You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.",
+    "category": "linkedLists",
+    "difficulty": "hard",
+    "constraints": "k <= 10^4",
+    "sampleInput": "[[1,4,5],[1,3,4],[2,6]]",
+    "sampleOutput": "[1,1,2,3,4,4,5,6]",
+    "explanation": "Merge all.",
+    "testCases": [
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": false
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": false
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      },
+      {
+        "input": "[[1,4,5],[1,3,4],[2,6]]",
+        "expectedOutput": "[1,1,2,3,4,4,5,6]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def mergeKLists(lists): pass",
+        "timeComplexity": "O(N log k)",
+        "spaceComplexity": "O(k)",
+        "explanation": "Min Heap"
+      }
+    }
+  },
+  {
+    "_id": "41",
+    "title": "Maximum Depth of Binary Tree",
+    "description": "Given the root of a binary tree, return its maximum depth.",
+    "category": "trees",
+    "difficulty": "easy",
+    "constraints": "1 <= nodes <= 10^4",
+    "sampleInput": "[3,9,20,null,null,15,7]",
+    "sampleOutput": "3",
+    "explanation": "Level count.",
+    "testCases": [
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "3",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxDepth(root): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "DFS or BFS"
+      }
+    }
+  },
+  {
+    "_id": "42",
+    "title": "Invert Binary Tree",
+    "description": "Given the root of a binary tree, invert the tree, and return its root.",
+    "category": "trees",
+    "difficulty": "easy",
+    "constraints": "0 <= nodes <= 100",
+    "sampleInput": "[4,2,7,1,3,6,9]",
+    "sampleOutput": "[4,7,2,9,6,3,1]",
+    "explanation": "Swap left and right.",
+    "testCases": [
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": false
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": false
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      },
+      {
+        "input": "[4,2,7,1,3,6,9]",
+        "expectedOutput": "[4,7,2,9,6,3,1]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def invertTree(root): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Recursion"
+      }
+    }
+  },
+  {
+    "_id": "43",
+    "title": "Same Tree",
+    "description": "Given the roots of two binary trees p and q, write a function to check if they are the same or not.",
+    "category": "trees",
+    "difficulty": "easy",
+    "constraints": "0 <= nodes <= 100",
+    "sampleInput": "p = [1,2,3], q = [1,2,3]",
+    "sampleOutput": "true",
+    "explanation": "Identical structure and values.",
+    "testCases": [
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def isSameTree(p, q): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Recursion"
+      }
+    }
+  },
+  {
+    "_id": "44",
+    "title": "Subtree of Another Tree",
+    "description": "Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and node values of subRoot.",
+    "category": "trees",
+    "difficulty": "easy",
+    "constraints": "1 <= nodes <= 2000",
+    "sampleInput": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+    "sampleOutput": "true",
+    "explanation": "Subtree match.",
+    "testCases": [
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "root = [3,4,5,1,2], subRoot = [4,1,2]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def isSubtree(root, subRoot): pass",
+        "timeComplexity": "O(m*n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Check equality at each node"
+      }
+    }
+  },
+  {
+    "_id": "45",
+    "title": "Lowest Common Ancestor of a BST",
+    "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.",
+    "category": "trees",
+    "difficulty": "medium",
+    "constraints": "2 <= nodes <= 10^5",
+    "sampleInput": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+    "sampleOutput": "6",
+    "explanation": "LCA of 2 and 8 is 6.",
+    "testCases": [
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "root = [6,2,8,0,4,7,9], p = 2, q = 8",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def lowestCommonAncestor(root, p, q): pass",
+        "timeComplexity": "O(h)",
+        "spaceComplexity": "O(h)",
+        "explanation": "BST property"
+      }
+    }
+  },
+  {
+    "_id": "46",
+    "title": "Binary Tree Level Order Traversal",
+    "description": "Given the root of a binary tree, return the level order traversal of its nodes' values.",
+    "category": "trees",
+    "difficulty": "medium",
+    "constraints": "0 <= nodes <= 2000",
+    "sampleInput": "[3,9,20,null,null,15,7]",
+    "sampleOutput": "[[3],[9,20],[15,7]]",
+    "explanation": "BFS.",
+    "testCases": [
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": false
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": false
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      },
+      {
+        "input": "[3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def levelOrder(root): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Queue BFS"
+      }
+    }
+  },
+  {
+    "_id": "47",
+    "title": "Validate Binary Search Tree",
+    "description": "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
+    "category": "trees",
+    "difficulty": "medium",
+    "constraints": "1 <= nodes <= 10^4",
+    "sampleInput": "[2,1,3]",
+    "sampleOutput": "true",
+    "explanation": "Valid BST.",
+    "testCases": [
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "[2,1,3]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def isValidBST(root): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Inorder traversal is sorted"
+      }
+    }
+  },
+  {
+    "_id": "48",
+    "title": "Kth Smallest Element in a BST",
+    "description": "Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.",
+    "category": "trees",
+    "difficulty": "medium",
+    "constraints": "1 <= k <= n <= 10^4",
+    "sampleInput": "[3,1,4,null,2], k = 1",
+    "sampleOutput": "1",
+    "explanation": "Smallest is 1.",
+    "testCases": [
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "[3,1,4,null,2], k = 1",
+        "expectedOutput": "1",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def kthSmallest(root, k): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Inorder"
+      }
+    }
+  },
+  {
+    "_id": "49",
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "description": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+    "category": "trees",
+    "difficulty": "medium",
+    "constraints": "1 <= nodes <= 3000",
+    "sampleInput": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+    "sampleOutput": "[3,9,20,null,null,15,7]",
+    "explanation": "Rebuild tree.",
+    "testCases": [
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": false
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": false
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      },
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "expectedOutput": "[3,9,20,null,null,15,7]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def buildTree(preorder, inorder): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Recursion with map"
+      }
+    }
+  },
+  {
+    "_id": "50",
+    "title": "Binary Tree Maximum Path Sum",
+    "description": "A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them.",
+    "category": "trees",
+    "difficulty": "hard",
+    "constraints": "1 <= nodes <= 3 * 10^4",
+    "sampleInput": "[1,2,3]",
+    "sampleOutput": "6",
+    "explanation": "Max path.",
+    "testCases": [
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      },
+      {
+        "input": "[1,2,3]",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def maxPathSum(root): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(h)",
+        "explanation": "Recursion max gain"
+      }
+    }
+  },
+  {
+    "_id": "51",
+    "title": "Number of Islands",
+    "description": "Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "m, n <= 300",
+    "sampleInput": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+    "sampleOutput": "1",
+    "explanation": "Connected land.",
+    "testCases": [
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\"],[\"0\",\"1\",\"0\"]]",
+        "expectedOutput": "1",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def numIslands(grid): pass",
+        "timeComplexity": "O(mn)",
+        "spaceComplexity": "O(mn)",
+        "explanation": "DFS/BFS"
+      }
+    }
+  },
+  {
+    "_id": "52",
+    "title": "Clone Graph",
+    "description": "Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "0 <= nodes <= 100",
+    "sampleInput": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+    "sampleOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+    "explanation": "Clone structure.",
+    "testCases": [
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": false
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": false
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      },
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def cloneGraph(node): pass",
+        "timeComplexity": "O(V+E)",
+        "spaceComplexity": "O(V)",
+        "explanation": "DFS + Hashmap"
+      }
+    }
+  },
+  {
+    "_id": "53",
+    "title": "Pacific Atlantic Water Flow",
+    "description": "There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "m, n <= 200",
+    "sampleInput": "heights = [[1]]",
+    "sampleOutput": "[[0,0]]",
+    "explanation": "Water flow.",
+    "testCases": [
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": false
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": false
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      },
+      {
+        "input": "heights = [[1]]",
+        "expectedOutput": "[[0,0]]",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def pacificAtlantic(heights): pass",
+        "timeComplexity": "O(mn)",
+        "spaceComplexity": "O(mn)",
+        "explanation": "DFS from oceans"
+      }
+    }
+  },
+  {
+    "_id": "54",
+    "title": "Course Schedule",
+    "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "numCourses <= 2000",
+    "sampleInput": "2, [[1,0]]",
+    "sampleOutput": "true",
+    "explanation": "No cycle.",
+    "testCases": [
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "2, [[1,0]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def canFinish(num, pre): pass",
+        "timeComplexity": "O(V+E)",
+        "spaceComplexity": "O(V+E)",
+        "explanation": "Topological Sort"
+      }
+    }
+  },
+  {
+    "_id": "55",
+    "title": "Graph Valid Tree",
+    "description": "You have a graph of n nodes labeled from 0 to n - 1. You are given an integer n and a list of edges.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "n <= 2000",
+    "sampleInput": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+    "sampleOutput": "true",
+    "explanation": "Connected acyclic.",
+    "testCases": [
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": false
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+        "expectedOutput": "true",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def validTree(n, edges): pass",
+        "timeComplexity": "O(V+E)",
+        "spaceComplexity": "O(V+E)",
+        "explanation": "Union Find or DFS"
+      }
+    }
+  },
+  {
+    "_id": "56",
+    "title": "Number of Connected Components",
+    "description": "You have a graph of n nodes. You are given an integer n and an array edges.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "n <= 2000",
+    "sampleInput": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+    "sampleOutput": "2",
+    "explanation": "Two sets.",
+    "testCases": [
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+        "expectedOutput": "2",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def countComponents(n, edges): pass",
+        "timeComplexity": "O(V+E)",
+        "spaceComplexity": "O(V+E)",
+        "explanation": "Union Find"
+      }
+    }
+  },
+  {
+    "_id": "57",
+    "title": "Alien Dictionary",
+    "description": "There is a new alien language that uses the English alphabet. However, the order among the letters is unknown to you.",
+    "category": "graphs",
+    "difficulty": "hard",
+    "constraints": "words.length <= 100",
+    "sampleInput": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+    "sampleOutput": "wertf",
+    "explanation": "Derive order.",
+    "testCases": [
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": false
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": false
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      },
+      {
+        "input": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+        "expectedOutput": "wertf",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def alienOrder(words): pass",
+        "timeComplexity": "O(C)",
+        "spaceComplexity": "O(1)",
+        "explanation": "Topological Sort"
+      }
+    }
+  },
+  {
+    "_id": "58",
+    "title": "Word Ladder",
+    "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words.",
+    "category": "graphs",
+    "difficulty": "hard",
+    "constraints": "wordList.length <= 5000",
+    "sampleInput": "hit, cog, [hot,dot,dog,lot,log,cog]",
+    "sampleOutput": "5",
+    "explanation": "Shortest path.",
+    "testCases": [
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      },
+      {
+        "input": "hit, cog, [hot,dot,dog,lot,log,cog]",
+        "expectedOutput": "5",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def ladderLength(begin, end, wordList): pass",
+        "timeComplexity": "O(M^2 * N)",
+        "spaceComplexity": "O(M * N)",
+        "explanation": "BFS"
+      }
+    }
+  },
+  {
+    "_id": "59",
+    "title": "Longest Consecutive Sequence",
+    "description": "Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "0 <= nums.length <= 10^5",
+    "sampleInput": "[100,4,200,1,3,2]",
+    "sampleOutput": "4",
+    "explanation": "[1,2,3,4] length 4.",
+    "testCases": [
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": false
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": false
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      },
+      {
+        "input": "[100,4,200,1,3,2]",
+        "expectedOutput": "4",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def longestConsecutive(nums): pass",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)",
+        "explanation": "Union Find or Set"
+      }
+    }
+  },
+  {
+    "_id": "60",
+    "title": "Network Delay Time",
+    "description": "You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times.",
+    "category": "graphs",
+    "difficulty": "medium",
+    "constraints": "n <= 100",
+    "sampleInput": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+    "sampleOutput": "2",
+    "explanation": "Shortest path to all nodes.",
+    "testCases": [
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": false
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      },
+      {
+        "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+        "expectedOutput": "2",
+        "isHidden": true
+      }
+    ],
+    "isImportant": true,
+    "solution": {
+      "python": {
+        "code": "def networkDelayTime(times, n, k): pass",
+        "timeComplexity": "O(E log V)",
+        "spaceComplexity": "O(V+E)",
+        "explanation": "Dijkstra"
+      }
+    }
+  }
+]
