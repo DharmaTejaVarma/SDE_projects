@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 const sequelize = require('./config/database');
 
 dotenv.config();
@@ -11,7 +12,6 @@ const app = express();
    MIDDLEWARE
 ================================ */
 
-// Allow only frontend domain in production
 app.use(cors({
   origin: process.env.FRONTEND_URL || '*',
   credentials: true
@@ -44,6 +44,18 @@ app.get('/api/health', (req, res) => {
 });
 
 /* ===============================
+   SERVE FRONTEND IN PRODUCTION
+================================ */
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+  });
+}
+
+/* ===============================
    DATABASE INIT + SERVER START
 ================================ */
 
@@ -52,10 +64,9 @@ const startServer = async () => {
     await sequelize.authenticate();
     console.log('Database connected successfully.');
 
-    await sequelize.sync({ alter: false }); 
+    await sequelize.sync({ alter: false });
     console.log('Database synced.');
 
-    // Seed only if empty
     const Problem = require('./models/Problem');
     const rawProblems = require('./data/problems.json');
 
@@ -91,7 +102,7 @@ const startServer = async () => {
 
   } catch (error) {
     console.error('Failed to start server:', error);
-    process.exit(1); // Crash if DB fails (important for production)
+    process.exit(1);
   }
 };
 
