@@ -3,59 +3,68 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const sequelize = require('./config/database');
 
-// Import routes
-const authRoutes = require('./routes/auth');
-const problemRoutes = require('./routes/problems');
-const submissionRoutes = require('./routes/submissions');
-const progressRoutes = require('./routes/progress');
-const adminRoutes = require('./routes/admin');
-const leaderboardRoutes = require('./routes/leaderboard'); // New route import
-
 dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+/* ===============================
+   MIDDLEWARE
+================================ */
+
+// Allow only frontend domain in production
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/problems', problemRoutes);
-app.use('/api/submissions', submissionRoutes);
-app.use('/api/progress', progressRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/leaderboard', leaderboardRoutes); // New route registration
+/* ===============================
+   ROUTES
+================================ */
 
-// Health check
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/problems', require('./routes/problems'));
+app.use('/api/submissions', require('./routes/submissions'));
+app.use('/api/progress', require('./routes/progress'));
+app.use('/api/admin', require('./routes/admin'));
+app.use('/api/leaderboard', require('./routes/leaderboard'));
+
+/* ===============================
+   HEALTH CHECK
+================================ */
+
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'DSA Platform API is running (SQLite)' });
+  res.status(200).json({
+    success: true,
+    message: 'DSA Platform API running',
+    environment: process.env.NODE_ENV || 'development'
+  });
 });
 
-// Database Connection & Seeding
-const initDB = async () => {
+/* ===============================
+   DATABASE INIT + SERVER START
+================================ */
+
+const startServer = async () => {
   try {
     await sequelize.authenticate();
-    console.log('SQLite connected successfully.');
+    console.log('Database connected successfully.');
 
-    // Sync models (create tables)
-    await sequelize.sync({ alter: true }); // alter: true updates tables if models change
+    await sequelize.sync({ alter: false }); 
     console.log('Database synced.');
 
-    // Seed Database
+    // Seed only if empty
     const Problem = require('./models/Problem');
-    // Load raw json
     const rawProblems = require('./data/problems.json');
 
-    // Check if seeded
     const count = await Problem.count();
     if (count === 0) {
-      console.log('Seeding database with problems...');
+      console.log('Seeding database...');
 
-      // Transform _id to id if necessary, or just map fields
       const problemsToInsert = rawProblems.map(p => ({
-        id: parseInt(p._id), // Convert "1" to 1
+        id: parseInt(p._id),
         title: p.title,
         description: p.description,
         category: p.category,
@@ -64,25 +73,26 @@ const initDB = async () => {
         sampleInput: p.sampleInput,
         sampleOutput: p.sampleOutput,
         explanation: p.explanation,
-        solution: p.solution, // Sequelize handles JSON
-        testCases: p.testCases, // Sequelize handles JSON
+        solution: p.solution,
+        testCases: p.testCases,
         isImportant: p.isImportant,
         isActive: p.isActive
       }));
 
       await Problem.bulkCreate(problemsToInsert);
-      console.log('Database seeded successfully');
+      console.log('Seeding completed.');
     }
 
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Failed to start server:', error);
+    process.exit(1); // Crash if DB fails (important for production)
   }
 };
 
-initDB();
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+startServer();
